@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Temperature conversion</title>
+	
+	<style type="text/css">
+	
+	* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	}
+	body {
+	background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	}
+	form {
+	background: #fff;
+	padding: 1rem;
+	border-radius: 5px;
+	font-family: san-serif;
+	}
+	form h1, div > label, input[type='button'] {
+	text-transform: capitalize;
+	}
+	label {
+	display: block;
+	opacity: 0.5;
+	}
+	input,select, h3 {
+	border: none;
+	border-bottom: 1px solid rgba(0,0,0,0.5);
+	outline: none;
+	padding: 0.3rem;
+	font-size: 1.2rem;	
+	}
+	input[type='button'] {
+	width: 100%;
+	padding: 1rem;
+	background: #2b82ff;
+	color: #fff;
+	font-size: larger;
+	font-weight: bolder;
+	border-radius: 5px;
+	cursor: pointer;
+	}
+	select {
+	width: 100%;
+	background: transparent;
+	margin: 10px 0;
+	}
+	section, form > div{
+	margin: 1rem 0;
+	}
+	
+	
+	form > section {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 2rem;
+	align-items: center;
+	justify-content: center;
+	}
+	
+	@media screen and (min-width: 600px) {
+	form > section {
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	grid-gap: 2rem;
+	align-items: center;
+	justify-content: center;
+	}
+	}
+	
+	</style>
+
+</head>
+
+<body>
+	
+	<form>
+		<h1>temperature conversion</h1>
+
+		<section>
+		<div>
+			<label>degree</label>
+			<input type="number" name="degree" id="degree"/>
+		</div>
+
+		<div>
+			<label>type</label>
+			<select id="type">
+				<option>Celsius</option>
+				<option>Fahrenheit</option>
+			</select>
+		</div>
+		</section>
+
+		<div>
+			<label>result</label>
+			<h3 id="result"></h3>
+		</div>
+
+		<input type="button" value="convert" onclick="calculate();"/>
+
+	</form>	
+	
+	
+
+
+	<script src="js/js.js"></script>
+</body>
+</html> 
